@@ -3,7 +3,7 @@
     update_cache: yes
 
 - name: Return motd to registered var
-  ansible.builtin.command: DD_AGENT_MAJOR_VERSION=7 DD_API_KEY=9fa7ef2b23fc7e170e97252378431bf4 DD_SITE="datadoghq.com" bash -c "$(curl -L https://s3.amazonaws.com/dd-agent/scripts/install_script.sh)"
+  shell: DD_AGENT_MAJOR_VERSION=7 DD_API_KEY=9fa7ef2b23fc7e170e97252378431bf4 DD_SITE="datadoghq.com" bash -c "$(curl -L https://s3.amazonaws.com/dd-agent/scripts/install_script.sh)"
 
 
 - name: Restart datadog service
