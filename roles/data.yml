@@ -1,8 +1,6 @@
-- name: Setup todoapp project
-  hosts: all
+- hosts: all
   become: yes
   roles:
     - role: datadog
-      tags: datadog
-      when: COMPONENT == "datadog"
+
 
